@@ -1,0 +1,7 @@
+var searchEl = document.querySelector("#search")
+var cityInputEl = document.querySelector("#city-input")
+var cityEl = document.querySelector("city")
+var tempEl = document.querySelector("temp")
+var windEl = document.querySelector("wind")
+var humidityEl = document.querySelector("#humidity")
+var uvEl = document.querySelector("#uv")
