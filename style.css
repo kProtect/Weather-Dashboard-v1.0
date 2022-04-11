@@ -1,0 +1,26 @@
+header {
+    background: rgb(13,89,177);
+    background: linear-gradient(90deg, rgba(13,89,177,1) 0%, rgba(14,50,140,1) 50%, rgba(56,16,163,1) 100%);
+    text-align: center;
+}
+
+dt {
+    float: left;
+    margin-right: 10px;
+}
+
+#weather {
+    min-height: 230px;
+    border: 1px solid blue;
+}
+
+#search,input,#button {
+    margin-bottom: 20px;
+}
+
+#uv {
+    padding: 2px;
+}
+
+
+
