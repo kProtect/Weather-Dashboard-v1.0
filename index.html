@@ -1,44 +1,92 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <title>Weather Forcast</title>
   </head>
 
-  <body>
-
-    <div class=" border border-dark bg-primary">
-        <!-- Content here -->
+  <body  class="">
+    
+    <header>
+    <div class="border border-dark bg-primary">
         <h1 class="text-center text-white ">Weather Dashboard</h1>
     </div>
+    </header>
 
-    <div class="flex-row align-start align-stretch-lg align-content-start align-content-stretch-md min-100-vh">
+  <main>
+    <div class="container">
+      <div class="row">
+        <div class="">
+    <div class="">
+    
+        <div class="bg-light ">
+          <div class="card">
 
-        <div class="col-12 col-md-3 bg-light p-2">
+          <h1>Search for a City:</h1>
 
-          <h1 class="text-primary mb-4">Search for a City:</h1>
+          <form id="search-form " class="mb-2">
+            
+            <input id="search-input" class="form-input " type="text" placeholder="">
 
-          <form id="search-form w-100" class="mb-2">
-
-            <input id="search-input" class="form-input w-100 mb-2" type="text" placeholder="">
-
-            <button class="btn btn-info btn-block mb-2">Search</button>
+            <button class="btn btn-primary btn-block">Search</button>
 
           </form>
-    
     </div>
+  </div>
+</div>
+
+<div class="col">
+  <div class="">
+    <div class="" id="search">
+      <div class="card " id="history" >
+        <h3 class="card-header text-uppercase">Search History <i id="trash" class='fas fa-trash'
+            title='Clear History'></i>
+        </h3>
+        <div class="card-body" id="history-buttons">
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="w-100"></div>
+  
+  <div class="">
+    <div class="">
+      <div class="card " id="current-weather-card">
+        <h2 class="card-header" id="weather-status">sdfsf</h2>
+        <div class="card-body" id="current-weather">
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  
+
+    <div class="">
+    <div class="">
+      <div class="card hidden" id="five-day-card">
+        <h2 class="card-header" id="five-day-head">5-Day Forecast</h2>
+        <div class="card-body flex-row justify-space-around" id="five-day-body">
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+
+  </main>
+
 
     
-
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
   </body>
+  
 </html>
