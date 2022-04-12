@@ -12,7 +12,7 @@ var weatherEl = document.querySelector("#weather")
 var forecast2El = document.querySelector("#forecast2")
 var dateEl = document.querySelector("#date")
 
-var baseUrl = "http://api.openweathermap.org/";
+var baseUrl = "https://api.openweathermap.org/";
 var apiKey = "f4c03d6ed80fcdd0a6dafd6b139817cc";
 
 
