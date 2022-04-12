@@ -1,92 +1,80 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css">
     <title>Weather Forcast</title>
   </head>
 
-  <body  class="">
-    
-    <header>
-    <div class="border border-dark bg-primary">
-        <h1 class="text-center text-white ">Weather Dashboard</h1>
-    </div>
-    </header>
-
-  <main>
+  <body>
     <div class="container">
       <div class="row">
-        <div class="">
-    <div class="">
-    
-        <div class="bg-light ">
-          <div class="card">
-
-          <h1>Search for a City:</h1>
-
-          <form id="search-form " class="mb-2">
-            
-            <input id="search-input" class="form-input " type="text" placeholder="">
-
-            <button class="btn btn-primary btn-block">Search</button>
-
-          </form>
-    </div>
-  </div>
-</div>
-
-<div class="col">
-  <div class="">
-    <div class="" id="search">
-      <div class="card " id="history" >
-        <h3 class="card-header text-uppercase">Search History <i id="trash" class='fas fa-trash'
-            title='Clear History'></i>
-        </h3>
-        <div class="card-body" id="history-buttons">
-
+        <div class="col-12 ">
+          <header class="p-2 text-light mb-2 ">
+            <h1>Weather Dashboard</h1>
+          </header>
         </div>
+      </div>
 
+    <div class="row">
+      <div class="col-sm-12 col-lg-3">
+        <aside>
+          <div id="search">
+            <h2 class="fs-2">Search for a City:</h2>
+            <form id="form">
+              <input 
+              id="city-input"
+              type="text"
+              placeholder="Atlanta"
+              class="col-12 form-control">
+              <button class="btn btn-primary col-12">Search:</button>
+            </form>
+          </div>
+          <div id="button"></div>
+        </aside>
+      </div>
+    <div class="col-sm-12 col-lg-9">
+
+      <main>
+        <div id="weather" class="hide row">
+          <div class="col-12">
+            <div class="d-flex">
+              <h2 class="me-2 text-capitalize" id="weather-city"></h2>
+              <h2 class="me-2" id="date"></h2>
+              <img id="icon" src="" >
+            </div>
+            <dl>
+              <dt>Temp:</dt>
+              <dd id="temp"></dd>
+              <dt>Wind:</dt>
+              <dd id="wind"></dd>
+              <dt>Humidity:</dt>
+              <dd id="humidity"></dd>
+              <dt>UV Index:</dt>
+              <dt id="uv"></dt>
+            </dl>
+          </div>
+        </div>
+        <div id="forecast" class="hide row">
+          <div class="col-12">
+            <h3>5-Day Forecast:</h3>
+          </div>
+        </div>
+        <div id="forecast2" class="row g-2"></div>
+       </main>
       </div>
     </div>
   </div>
-
-  <div class="w-100"></div>
-  
-  <div class="">
-    <div class="">
-      <div class="card " id="current-weather-card">
-        <h2 class="card-header" id="weather-status">sdfsf</h2>
-        <div class="card-body" id="current-weather">
-
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-  
-
-    <div class="">
-    <div class="">
-      <div class="card hidden" id="five-day-card">
-        <h2 class="card-header" id="five-day-head">5-Day Forecast</h2>
-        <div class="card-body flex-row justify-space-around" id="five-day-body">
-
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-</div>
-</div>
-
-  </main>
-
-
-    
+  <script src="https://momentjs.com/downloads/moment.min.js"></script>
+  <script src="./script.js"></script>    
   </body>
-  
+
 </html>
