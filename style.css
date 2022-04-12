@@ -33,3 +33,18 @@ dt {
 button {
     margin-top: 5px
 }
+
+.favorable {
+    background-color: green;
+    border-radius: 10px;
+}
+
+.moderate {
+    background-color: orange;
+    border-radius: 10px;
+}
+
+.severe {
+    background-color: red;
+    border-radius: 10px;
+}

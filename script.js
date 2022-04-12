@@ -35,12 +35,12 @@ function generate5day (data) {
         }
         div.classList = `card-weather-container col-sm-12 ${offsetClass} col-lg-2 text-light`;
         div.innerHTML = `
-         <div class = "card-weather bg-dark p-3">
+         <div class = "card-weather bg-dark p-1">
           <h4>${date}</h4>
              <img src="https://openweathermap.org/img/wn/${icon}.png" />
             <dl>
             <dt>Temp:</dt>
-            <dd>${temp}</dd>
+            <dd>${temp} F</dd>
             <dt>Wind:</dt>
             <dd>${windSpd} MPH</dd>
             <dt>Humidity</dt>
@@ -80,25 +80,25 @@ function getCityWeather(city) {
             return response.json();
         })
         .then(function (data){
-            console.log(data)
             var date = moment(Date.now()).format("L")
-            var current = data.current;
-            var temp = current.temp;
+            var current = data.current
+            var temp = current.temp
             var winspd = current.wind_speed
             var humidity = current.humidity
-            var uv = current.uv
-            var icon = current.weather[0].icon;
+            var uv = current.uvi
+            var icon = current.weather[0].icon
 
             cityEl.textContent = city;
             dateEl.textContent = date;
             tempEl.textContent = temp;
-            windEl.textContent = winspd;
-            tempEl.textContent = temp;
-            humidityEl.textContent = humidity;
+            windEl.textContent = winspd + " MPH";
+            tempEl.textContent = temp+" F";
+            humidityEl.textContent = humidity + " %";
             uvEl.textContent = uv;
+
             if(uv < 3 ) {
                 uvEl.classList.add("favorable")
-            } else if (uvEl < 7) {
+            } else if (uv < 7) {
                 uvEl.classList.add("moderate")
             } else {
                 uvEl.classList.add("severe")
