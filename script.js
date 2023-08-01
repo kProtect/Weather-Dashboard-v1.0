@@ -17,7 +17,7 @@ var apiKey = "f4c03d6ed80fcdd0a6dafd6b139817cc";
 
 
 function generate5day (data) {
-    forecastEl.innerHTML = "";
+    forecast2El.innerHTML = "";
     data.forEach(function (day, index) {
         if(index === 0 || index > 5) {
             return;
@@ -113,7 +113,7 @@ function getCityWeather(city) {
     })
 }
 
-function cityButtons() {
+function cityButtons(event) {
     buttonEl.innerHTML = "";
     var cities = localStorage.getItem("cities");
     if (cities) {
@@ -131,7 +131,8 @@ function cityButtons() {
     });
 }
 
-function saveCityLoca(city) {
+function saveCityLoca(city,event) {
+
     city = city.toLowerCase()
   var cities = localStorage.getItem("cities");
   if (cities) {
@@ -148,20 +149,21 @@ function saveCityLoca(city) {
     localStorage.setItem("cities", JSON.stringify(cities))
 }
 
-function handleFormSubmit(evt) {
-    evt.preventDefault();
+function handleFormSubmit(event) {
+    event.preventDefault();
     var city = cityInputEl.value
     getCityWeather(city)
 }
 
-function handleButtonClick(evt) {
-    var target = evt.target
+function handleButtonClick(event) {
+    var target = event.target
     var city = target.getAttribute("data-city")
     getCityWeather(city)
 
 }
 
-function addEventListeners() {
+function addEventListeners(event) {
+   
     searchEl.addEventListener("submit", handleFormSubmit)
     buttonEl.addEventListener("click", handleButtonClick)
 }
@@ -171,4 +173,5 @@ function init(){
     cityButtons()
 }
 
+console.log(addEventListeners)
 init()
